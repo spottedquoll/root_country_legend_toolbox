@@ -1,7 +1,9 @@
 function names = GetAllCountryNamePossibilites(countryNumber,RootCountryLegend)
 %GetAllCountryNamePossibilites
 
- names = unique(RootCountryLegend(countryNumber+1,3:10));
+ name_columns = 7:11;
+    
+ names = unique(RootCountryLegend(countryNumber+1,name_columns));
 
  no_match = find(~cellfun(@isempty,strfind(names,'ZZZZ')));
  
