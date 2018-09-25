@@ -17,7 +17,7 @@ else
 end
 
 alpha3 = matchCountryNameToAlpha3InLegend('Australia', root_country_legend);
-if alpha3 == 'AUS'
+if strcmp(alpha3,'AUS')
     disp('Test passed.');
     passed = passed + 1;
 else
@@ -53,6 +53,25 @@ else
     disp('Test failed!');
     failed = failed + 1;
 end
+
+name = get_un_country_name_from_acronym('AUS',root_country_legend);
+if strcmp(name,'Australia')
+    disp('Test passed.');
+    passed = passed + 1;
+else
+    disp('Test failed!');
+    failed = failed + 1;
+end
+
+name = get_un_country_name_from_acronym('AIA',root_country_legend);
+if strcmp(name,'Anguilla')
+    disp('Test passed.');
+    passed = passed + 1;
+else
+    disp('Test failed!');
+    failed = failed + 1;
+end
+
 
 %% Finished
 disp(['Finished running ' num2str(passed + failed) ' tests.']);
