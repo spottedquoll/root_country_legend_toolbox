@@ -3,7 +3,7 @@ function code = matchCountryNameToAlpha3InLegend(countryName,RootCountryLegend)
 
 code = [];
 
-nameCols = 7:11;
+nameCols = [7:11 13];
 
 i = 1;
 while isempty(code) && i <= size(nameCols,2)

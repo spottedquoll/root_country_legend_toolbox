@@ -16,6 +16,15 @@ else
     failed = failed + 1;
 end
 
+country_number = matchCountryNameToRootCountryNumber('China (mainland)', root_country_legend);
+if country_number == 37
+    disp('Test passed.');
+    passed = passed + 1;
+else
+    disp('Test failed!');
+    failed = failed + 1;
+end
+
 alpha3 = matchCountryNameToAlpha3InLegend('Australia', root_country_legend);
 if strcmp(alpha3,'AUS')
     disp('Test passed.');
